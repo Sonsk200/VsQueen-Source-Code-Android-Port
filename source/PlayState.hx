@@ -342,29 +342,8 @@ class PlayState extends MusicBeatState
 		//dialogue shit
 		switch (songLowercase)
 		{
-			case 'tutorial':
-				dialogue = ["Hey you're pretty cute.", 'Use the arrow keys to keep up \nwith me singing.'];
-			case 'bopeebo':
-				dialogue = [
-					'HEY!',
-					"You think you can just sing\nwith my daughter like that?",
-					"If you want to date her...",
-					"You're going to have to go \nthrough ME first!"
-				];
-			case 'fresh':
-				dialogue = ["Not too shabby boy.", ""];
-			case 'dadbattle':
-				dialogue = [
-					"gah you think you're hot stuff?",
-					"If you can beat me here...",
-					"Only then I will even CONSIDER letting you\ndate my daughter!"
-				];
-			case 'senpai':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('senpai/senpaiDialogue'));
-			case 'roses':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
-			case 'thorns':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
+			case 'palace-raid':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('palace-raid/pottasium'));
 		}
 
 		//defaults if no stage was found in chart
@@ -1103,12 +1082,7 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
-				case 'senpai':
-					schoolIntro(doof);
-				case 'roses':
-					FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro(doof);
-				case 'thorns':
+				case 'palace-raid':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -1137,25 +1111,9 @@ class PlayState extends MusicBeatState
 		black.scrollFactor.set();
 		add(black);
 
-		var red:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFff1b31);
-		red.scrollFactor.set();
-
-		var senpaiEvil:FlxSprite = new FlxSprite();
-		senpaiEvil.frames = Paths.getSparrowAtlas('weeb/senpaiCrazy');
-		senpaiEvil.animation.addByPrefix('idle', 'Senpai Pre Explosion', 24, false);
-		senpaiEvil.setGraphicSize(Std.int(senpaiEvil.width * 6));
-		senpaiEvil.scrollFactor.set();
-		senpaiEvil.updateHitbox();
-		senpaiEvil.screenCenter();
-
 		if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'roses' || StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
 		{
 			remove(black);
-
-			if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
-			{
-				add(red);
-			}
 		}
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
@@ -1171,41 +1129,7 @@ class PlayState extends MusicBeatState
 				if (dialogueBox != null)
 				{
 					inCutscene = true;
-
-					if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
-					{
-						add(senpaiEvil);
-						senpaiEvil.alpha = 0;
-						new FlxTimer().start(0.3, function(swagTimer:FlxTimer)
-						{
-							senpaiEvil.alpha += 0.15;
-							if (senpaiEvil.alpha < 1)
-							{
-								swagTimer.reset();
-							}
-							else
-							{
-								senpaiEvil.animation.play('idle');
-								FlxG.sound.play(Paths.sound('Senpai_Dies'), 1, false, null, true, function()
-								{
-									remove(senpaiEvil);
-									remove(red);
-									FlxG.camera.fade(FlxColor.WHITE, 0.01, true, function()
-									{
-										add(dialogueBox);
-									}, true);
-								});
-								new FlxTimer().start(3.2, function(deadTime:FlxTimer)
-								{
-									FlxG.camera.fade(FlxColor.WHITE, 1.6, false);
-								});
-							}
-						});
-					}
-					else
-					{
-						add(dialogueBox);
-					}
+					add(dialogueBox);
 				}
 				else
 					startCountdown();
@@ -3376,7 +3300,6 @@ class PlayState extends MusicBeatState
 					FlxG.stage.window.onFocusIn.add(focusIn);
 
 					var ourSource:String = "assets/videos/daWeirdVid/dontDelete.webm";
-					WebmPlayer.SKIP_STEP_LIMIT = 90;
 					var str1:String = "WEBM SHIT"; 
 					webmHandler = new WebmHandler();
 					webmHandler.source(ourSource);
