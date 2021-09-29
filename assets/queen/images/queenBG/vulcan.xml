@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vulcan.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="animated fountain0000" x="2" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0001" x="2" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0002" x="900" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0003" x="900" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0004" x="1798" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0005" x="1798" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0006" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0007" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0008" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0009" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0010" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0011" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0012" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0013" x="2696" y="2" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0014" x="2" y="1060" width="901" height="1053"/>
+	<SubTexture name="animated fountain0015" x="908" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0016" x="908" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0017" x="1806" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0018" x="1806" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0019" x="2704" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0020" x="2704" y="1060" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0021" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0022" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0023" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0024" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0025" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0026" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0027" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0028" x="2" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0029" x="900" y="2118" width="901" height="1053"/>
+	<SubTexture name="animated fountain0030" x="1806" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0031" x="1806" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0032" x="2704" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0033" x="2704" y="2118" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0034" x="2" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0035" x="2" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0036" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0037" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0038" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0039" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0040" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0041" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0042" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0043" x="900" y="3176" width="893" height="1053" frameX="-2" frameY="0" frameWidth="901" frameHeight="1053"/>
+	<SubTexture name="animated fountain0044" x="1798" y="3176" width="901" height="1053"/>
+</TextureAtlas>
