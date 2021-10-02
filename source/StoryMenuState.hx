@@ -34,11 +34,11 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
+		['queen', 'bf', 'gf'],
 	];
 
 	var weekNames:Array<String> = [
-		"",
+		"tutorial week name",
 		"Q5U4EX7YY2E9N"
 	];
 
@@ -90,7 +90,7 @@ class StoryMenuState extends MusicBeatState
 		rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
-		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFF9CF51);
+		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFF5181F9);
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);

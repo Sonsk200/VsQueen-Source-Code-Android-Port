@@ -631,7 +631,7 @@ class PlayState extends MusicBeatState
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		healthBar.createFilledBar(0xFF3870FF, 0xFFB752FF);
 		// healthBar
 		add(healthBar);
 
@@ -1641,8 +1641,8 @@ class PlayState extends MusicBeatState
 			dad.y += Math.cos(floatvalve);
 		}
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.50)));
-		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.50)));
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.70)));
+		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.70)));
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
@@ -1702,7 +1702,7 @@ class PlayState extends MusicBeatState
 			#end
 		}
 
-		if (FlxG.keys.justPressed.ZERO)
+		if (FlxG.keys.justPressed.FIVE)
 		{
 			FlxG.switchState(new AnimationDebug(SONG.player1));
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,handleInput);

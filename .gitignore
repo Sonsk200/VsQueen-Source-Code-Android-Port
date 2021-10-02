@@ -1,6 +1,6 @@
 export/
 .vscode/
 assets/preload/data/milf/modchart.lua
-!start.bat
-!start -debug.bat
-!build.bat
+1build.bat
+1start -debug.bat
+1start.bat

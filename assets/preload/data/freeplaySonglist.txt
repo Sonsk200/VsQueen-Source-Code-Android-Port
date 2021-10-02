@@ -1,2 +1,2 @@
 Tutorial:gf:1
-Palace-Raid:dad:2
+Palace-Raid:queen:2

@@ -2,34 +2,64 @@
 <TextureAtlas imagePath="town.png">
 	<!-- Created with Adobe Animate version 19.0.0.326 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="city0000" x="2" y="2" width="1957" height="976" frameX="0" frameY="-1" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0001" x="1964" y="2" width="1957" height="975" frameX="0" frameY="-2" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0002" x="2" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0003" x="1964" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0004" x="1964" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0005" x="1964" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0006" x="1964" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0007" x="1964" y="983" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0008" x="2" y="1962" width="1957" height="976" frameX="0" frameY="-1" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0009" x="1964" y="1962" width="1957" height="975" frameX="0" frameY="-2" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0010" x="2" y="2943" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0011" x="1964" y="2943" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0012" x="1964" y="2943" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0013" x="1964" y="2943" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0014" x="1964" y="2943" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0015" x="2" y="3922" width="1957" height="977"/>
-	<SubTexture name="city0016" x="1964" y="3922" width="1957" height="976" frameX="0" frameY="-1" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0017" x="2" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0018" x="1964" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0019" x="1964" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0020" x="1964" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0021" x="1964" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0022" x="1964" y="4904" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0023" x="2" y="5883" width="1957" height="977"/>
-	<SubTexture name="city0024" x="1964" y="5883" width="1957" height="976" frameX="0" frameY="-1" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0025" x="2" y="6865" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0026" x="1964" y="6865" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0027" x="1964" y="6865" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0028" x="1964" y="6865" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
-	<SubTexture name="city0029" x="1964" y="6865" width="1957" height="974" frameX="0" frameY="-3" frameWidth="1957" frameHeight="977"/>
+	<SubTexture name="city0000" x="2" y="2" width="1957" height="975"/>
+	<SubTexture name="city0001" x="1964" y="2" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0002" x="2" y="982" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0003" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0004" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0005" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0006" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0007" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0008" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0009" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0010" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0011" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0012" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0013" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0014" x="1964" y="982" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0015" x="2" y="1960" width="1957" height="975"/>
+	<SubTexture name="city0016" x="1964" y="1960" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0017" x="2" y="2940" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0018" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0019" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0020" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0021" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0022" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0023" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0024" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0025" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0026" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0027" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0028" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0029" x="1964" y="2940" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0030" x="2" y="3918" width="1957" height="975"/>
+	<SubTexture name="city0031" x="1964" y="3918" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0032" x="2" y="4898" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0033" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0034" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0035" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0036" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0037" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0038" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0039" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0040" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0041" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0042" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0043" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0044" x="1964" y="4898" width="1956" height="973" frameX="-1" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0045" x="2" y="5876" width="1957" height="975"/>
+	<SubTexture name="city0046" x="1964" y="5876" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0047" x="2" y="6856" width="1957" height="973" frameX="0" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0048" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0049" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0050" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0051" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0052" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0053" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0054" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0055" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0056" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0057" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0058" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
+	<SubTexture name="city0059" x="1964" y="6856" width="1955" height="973" frameX="-2" frameY="-2" frameWidth="1957" frameHeight="975"/>
 </TextureAtlas>
