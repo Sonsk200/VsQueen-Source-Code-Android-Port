@@ -66,6 +66,11 @@ class ChartingState extends MusicBeatState
 	var writingNotesText:FlxText;
 	var highlight:FlxSprite;
 
+	var noteStyle:Int = 0;
+	var styles:Array<String> = ['normal', 'banana'];
+
+	var noteTypeText:FlxText = new FlxText(0, 50, 0, 'Charting: ', 16);
+
 	var GRID_SIZE:Int = 40;
 
 	var dummyArrow:FlxSprite;
@@ -123,6 +128,9 @@ class ChartingState extends MusicBeatState
 
 		gridBG = FlxGridOverlay.create(GRID_SIZE, GRID_SIZE, GRID_SIZE * 8, GRID_SIZE * 16);
 		add(gridBG);
+
+		noteTypeText.scrollFactor.set();
+		add(noteTypeText);
 
 		var blackBorder:FlxSprite = new FlxSprite(60,10).makeGraphic(120,100,FlxColor.BLACK);
 		blackBorder.scrollFactor.set();
@@ -666,6 +674,8 @@ class ChartingState extends MusicBeatState
 	{
 		updateHeads();
 
+		noteTypeText.text = 'Charting: ' + styles[noteStyle];
+
 		snapText.text = "Snap: 1/" + snap + " (" + (doSnapShit ? "Control to disable" : "Snap Disabled, Control to renable") + ")\nAdd Notes: 1-8 (or click)\n";
 
 		curStep = recalculateSteps();
@@ -941,6 +951,23 @@ class ChartingState extends MusicBeatState
 				}
 			}
 
+			if(FlxG.keys.justPressed.Z)
+			{
+				this.noteStyle --;
+				if (noteStyle < 0)
+				{
+					noteStyle = styles.length - 1;
+				}
+			}
+			if(FlxG.keys.justPressed.X)
+			{
+				this.noteStyle ++;
+				if (noteStyle == styles.length)
+				{
+					noteStyle = 0;
+				}
+			}
+
 			if (FlxG.keys.justPressed.R)
 			{
 				if (FlxG.keys.pressed.SHIFT)
@@ -1146,7 +1173,7 @@ class ChartingState extends MusicBeatState
 		{
 			var strum = note[0] + Conductor.stepCrochet * (_song.notes[daSec].lengthInSteps * sectionNum);
 
-			var copiedNote:Array<Dynamic> = [strum, note[1], note[2]];
+			var copiedNote:Array<Dynamic> = [strum, note[1], note[2], note[3]];
 			_song.notes[daSec].sectionNotes.push(copiedNote);
 		}
 
@@ -1240,8 +1267,9 @@ class ChartingState extends MusicBeatState
 			var daNoteInfo = i[1];
 			var daStrumTime = i[0];
 			var daSus = i[2];
+			var daStyle = i[3];
 
-			var note:Note = new Note(daStrumTime, daNoteInfo % 4,null,false,true);
+			var note:Note = new Note(daStrumTime, daNoteInfo % 4,null,false,true,daStyle);
 			note.sustainLength = daSus;
 			note.setGraphicSize(GRID_SIZE, GRID_SIZE);
 			note.updateHitbox();
@@ -1394,12 +1422,13 @@ class ChartingState extends MusicBeatState
 	{
 		var noteStrum = getStrumTime(dummyArrow.y) + sectionStartTime();
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
-		var noteSus = 0;
+		var noteSus = 0; //there is no way they didnt do this on purpose
+		var noteStyle = styles[this.noteStyle];
 
 		if (n != null)
 			_song.notes[curSection].sectionNotes.push([n.strumTime, n.noteData, n.sustainLength]);
 		else
-			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus]);
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, noteStyle]);
 
 		var thingy = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];
 

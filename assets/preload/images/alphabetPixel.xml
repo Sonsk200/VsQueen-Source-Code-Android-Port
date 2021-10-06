@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="alphabetPixel.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="A0000" x="2" y="2" width="62" height="120"/>
+	<SubTexture name="B0000" x="69" y="2" width="62" height="120"/>
+	<SubTexture name="C0000" x="136" y="2" width="62" height="120"/>
+	<SubTexture name="D0000" x="203" y="2" width="62" height="120"/>
+	<SubTexture name="E0000" x="270" y="2" width="62" height="120"/>
+	<SubTexture name="F0000" x="337" y="2" width="62" height="120"/>
+	<SubTexture name="G0000" x="404" y="2" width="62" height="120"/>
+	<SubTexture name="H0000" x="2" y="127" width="62" height="120"/>
+	<SubTexture name="I0000" x="69" y="127" width="62" height="120"/>
+	<SubTexture name="J0000" x="136" y="127" width="62" height="120"/>
+	<SubTexture name="K0000" x="203" y="127" width="62" height="120"/>
+	<SubTexture name="L0000" x="270" y="127" width="62" height="120"/>
+	<SubTexture name="M0000" x="337" y="127" width="62" height="120"/>
+	<SubTexture name="N0000" x="404" y="127" width="62" height="120"/>
+	<SubTexture name="O0000" x="2" y="252" width="62" height="120"/>
+	<SubTexture name="P0000" x="69" y="252" width="62" height="120"/>
+	<SubTexture name="Q0000" x="136" y="252" width="62" height="120"/>
+	<SubTexture name="R0000" x="203" y="252" width="62" height="120"/>
+	<SubTexture name="S0000" x="270" y="252" width="62" height="120"/>
+	<SubTexture name="T0000" x="337" y="252" width="62" height="120"/>
+	<SubTexture name="U0000" x="404" y="252" width="62" height="120"/>
+	<SubTexture name="V0000" x="2" y="377" width="62" height="120"/>
+	<SubTexture name="W0000" x="69" y="377" width="62" height="120"/>
+	<SubTexture name="X0000" x="136" y="377" width="62" height="120"/>
+	<SubTexture name="Y0000" x="203" y="377" width="62" height="120"/>
+	<SubTexture name="Z0000" x="270" y="377" width="62" height="120"/>
+</TextureAtlas>

@@ -298,7 +298,7 @@ class DialogueBox extends FlxSpriteGroup
 			// box.flipX = true;
 		}
 
-		swagDialogue = new FlxTypeText(400, 450, Std.int(FlxG.width * 0.6), "", 50);
+		swagDialogue = new FlxTypeText(400, 450, Std.int(FlxG.width * 0.6), "", 45);
 		swagDialogue.font = Paths.font("determination.otf");
 		swagDialogue.color = 0xFFFFFFFF;
 		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('queen'), 0.9)];

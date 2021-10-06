@@ -244,7 +244,7 @@ class MainMenuState extends MusicBeatState
 				else if (optionShit[curSelected] == 'deltarune')
 					fancyOpenURL("https://deltarune.com");
 				else if (optionShit[curSelected] == 'twitter')
-					fancyOpenURL("https://twitter.com/home"); //we didnt make an account yet lol
+					fancyOpenURL("https://twitter.com/VsQueenMod");
 				else
 				{
 					selectedSomethin = true;

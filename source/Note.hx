@@ -35,11 +35,15 @@ class Note extends FlxSprite
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
 
+	public var noteStyle:String = 'normal';
+
 	public var rating:String = "shit";
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inCharter:Bool = false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inCharter:Bool = false, noteStyle:String = 'normal')
 	{
 		super();
+
+		this.noteStyle = noteStyle;
 
 		if (prevNote == null)
 			prevNote = this;
@@ -97,26 +101,55 @@ class Note extends FlxSprite
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
 			default:
-				frames = Paths.getSparrowAtlas('NOTE_assets');
+				switch(noteStyle)
+				{
+					case 'banana':
+					{
+						frames = Paths.getSparrowAtlas('BANANA');
 
-				animation.addByPrefix('greenScroll', 'green0');
-				animation.addByPrefix('redScroll', 'red0');
-				animation.addByPrefix('blueScroll', 'blue0');
-				animation.addByPrefix('purpleScroll', 'purple0');
+						animation.addByPrefix('greenScroll', 'banana');
+						animation.addByPrefix('redScroll', 'banana');
+						animation.addByPrefix('blueScroll', 'banana');
+						animation.addByPrefix('purpleScroll', 'banana');
 
-				animation.addByPrefix('purpleholdend', 'pruple end hold');
-				animation.addByPrefix('greenholdend', 'green hold end');
-				animation.addByPrefix('redholdend', 'red hold end');
-				animation.addByPrefix('blueholdend', 'blue hold end');
+						animation.addByPrefix('purpleholdend', 'banana');
+						animation.addByPrefix('greenholdend', 'banana');
+						animation.addByPrefix('redholdend', 'banana');
+						animation.addByPrefix('blueholdend', 'banana');
 
-				animation.addByPrefix('purplehold', 'purple hold piece');
-				animation.addByPrefix('greenhold', 'green hold piece');
-				animation.addByPrefix('redhold', 'red hold piece');
-				animation.addByPrefix('bluehold', 'blue hold piece');
+						animation.addByPrefix('purplehold', 'banana');
+						animation.addByPrefix('greenhold', 'banana');
+						animation.addByPrefix('redhold', 'banana');
+						animation.addByPrefix('bluehold', 'banana');
 
-				setGraphicSize(Std.int(width * 0.7));
-				updateHitbox();
-				antialiasing = true;
+						setGraphicSize(Std.int(width * 0.7));
+						updateHitbox();
+						antialiasing = false;
+					}
+					default:
+					{
+						frames = Paths.getSparrowAtlas('NOTE_assets');
+
+						animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'blue0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+		
+						animation.addByPrefix('purpleholdend', 'pruple end hold');
+						animation.addByPrefix('greenholdend', 'green hold end');
+						animation.addByPrefix('redholdend', 'red hold end');
+						animation.addByPrefix('blueholdend', 'blue hold end');
+		
+						animation.addByPrefix('purplehold', 'purple hold piece');
+						animation.addByPrefix('greenhold', 'green hold piece');
+						animation.addByPrefix('redhold', 'red hold piece');
+						animation.addByPrefix('bluehold', 'blue hold piece');
+		
+						setGraphicSize(Std.int(width * 0.7));
+						updateHitbox();
+						antialiasing = true;
+					}
+				}
 		}
 
 		switch (noteData)

@@ -276,7 +276,7 @@ class AlphaCharacter extends FlxSprite
 	public function new(x:Float, y:Float)
 	{
 		super(x, y);
-		var tex = Paths.getSparrowAtlas('alphabet');
+		var tex = Paths.getSparrowAtlas('alphabetPixel');
 		frames = tex;
 
 		antialiasing = true;
@@ -284,7 +284,7 @@ class AlphaCharacter extends FlxSprite
 
 	public function createBold(letter:String)
 	{
-		animation.addByPrefix(letter, letter.toUpperCase() + " bold", 24);
+		animation.addByPrefix(letter, letter.toUpperCase(), 24);
 		animation.play(letter);
 		updateHitbox();
 	}
@@ -297,7 +297,7 @@ class AlphaCharacter extends FlxSprite
 			letterCase = 'capital';
 		}
 
-		animation.addByPrefix(letter, letter + " " + letterCase, 24);
+		animation.addByPrefix(letter, letter.toUpperCase(), 24);
 		animation.play(letter);
 		updateHitbox();
 
@@ -309,7 +309,7 @@ class AlphaCharacter extends FlxSprite
 
 	public function createNumber(letter:String):Void
 	{
-		animation.addByPrefix(letter, letter, 24);
+		animation.addByPrefix(letter, letter.toUpperCase(), 24);
 		animation.play(letter);
 
 		updateHitbox();
