@@ -145,6 +145,7 @@ class PlayState extends MusicBeatState
 	public static var misses:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public var accuracy:Float = 0.00;
+	public var endAccuracy:Float = 0.00;
 	private var accuracyDefault:Float = 0.00;
 	private var totalNotesHit:Float = 0;
 	private var totalNotesHitDefault:Float = 0;
@@ -351,6 +352,13 @@ class PlayState extends MusicBeatState
 		{
 			case 'palace-raid':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('palace-raid/pottasium'));
+			// case 'killer-queen':
+			// 	if (endAccuracy >= 80.00)
+			// 		dialogue = CoolUtil.coolTextFile(Paths.txt('killer-queen/tight bars little man'));
+			// 	else
+			// 		dialogue = CoolUtil.coolTextFile(Paths.txt('killer-queen/ur bad lol'));
+			case 'tutorial':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('tutorial/god-damn-it'));
 		}
 
 		//defaults if no stage was found in chart
@@ -780,6 +788,10 @@ class PlayState extends MusicBeatState
 					});
 				case 'palace-raid':
 					schoolIntro(doof);
+				case 'killer-queen':
+					schoolIntro(doof);
+				case 'tutorial':
+					schoolIntro(doof);
 				default:
 					startCountdown();
 			}
@@ -1057,6 +1069,7 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
+		endAccuracy = 0;
 		if(storyDifficulty == 2)
 			poison = 0.0025;
 		else if(storyDifficulty == 1)
@@ -2222,6 +2235,23 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singDOWN' + altAnim, true);
 							case 0:
 								dad.playAnim('singLEFT' + altAnim, true);
+						}
+
+						if(storyDifficulty >= 2)
+						{
+							switch(curSong)
+							{
+								case 'palace-raid':
+								{
+									if (health > 0.5)
+										health -= 0.005;
+								}
+								case 'killer-queen':
+								{
+									if (health > 0.2)
+										health -= 0.01;
+								}
+							}
 						}
 						
 						if (FlxG.save.data.cpuStrums)
@@ -3545,6 +3575,10 @@ class PlayState extends MusicBeatState
 						camHUD.visible = true;
 					}
 				});
+			}
+			if (curBeat == 546 && !songEnded)
+			{
+				endAccuracy = accuracy;
 			}
 		}
 

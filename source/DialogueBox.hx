@@ -1,5 +1,6 @@
 package;
 
+import flixel.addons.ui.SwatchData;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.text.FlxTypeText;
@@ -27,6 +28,8 @@ class DialogueBox extends FlxSpriteGroup
 	public var finishThing:Void->Void;
 
 	var portraitRight:FlxSprite;
+
+	var gf:FlxSprite;
 	var queenNORMAL:FlxSprite;
 	
 	var queenANGRY:FlxSprite;
@@ -55,7 +58,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var bgFade:FlxSprite;
 
-	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>)
+	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>, box_X:Float = 50.65, box_Y:Float = 384.25)
 	{
 		super();
 
@@ -83,13 +86,13 @@ class DialogueBox extends FlxSpriteGroup
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'palace-raid':
+			case 'palace-raid','tutorial':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
 				box.animation.addByPrefix('normal', 'speech bubble normal', 24, true);
-				box.x = 50.65;
-				box.y = 384.25;
+				box.x = box_X;
+				box.y = box_Y;
 		}
 
 		this.dialogueList = dialogueList;
@@ -269,6 +272,14 @@ class DialogueBox extends FlxSpriteGroup
 		add(portraitRight);
 		portraitRight.visible = false;
 
+		gf = new FlxSprite(87.2, 453.2).loadGraphic(Paths.image('portraits/bf/gf', 'queen'));
+		gf.setGraphicSize(Std.int(gf.width = 278.85));
+		gf.updateHitbox();
+		gf.antialiasing = false;
+		gf.scrollFactor.set();
+		add(gf);
+		gf.visible = false;
+
 		susieMAD = new FlxSprite(136, 452).loadGraphic(Paths.image('portraits/susie/mad','queen'));
 		susieMAD.setGraphicSize(Std.int(susieMAD.width = 187));
 		susieMAD.antialiasing = false;
@@ -341,7 +352,7 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			remove(dialogue);
 				
-			FlxG.sound.play(Paths.sound('clickText'), 0.8);
+			FlxG.sound.play(Paths.sound('clickText'), 0.2);
 
 			if (dialogueList[1] == null && dialogueList[0] != null)
 			{
@@ -356,6 +367,7 @@ class DialogueBox extends FlxSpriteGroup
 						portraitRight.visible = false;
 						queenNORMAL.visible = false;
 						swagDialogue.alpha -= 1 / 5;
+						swagDialogue.sounds = [FlxG.sound.load(Paths.sound('queen'), 0)];
 					}, 5);
 
 					new FlxTimer().start(1.2, function(tmr:FlxTimer)
@@ -395,7 +407,7 @@ class DialogueBox extends FlxSpriteGroup
 				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('queen'), 0.9)];
 			case 'bf':
 				portaitTrue(portraitRight);
-				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('bfText'), 0.6)];
+				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('bfText'), 0.7)];
 			case 'queenANGRY':
 				portaitTrue(queenANGRY);
 				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('queen'), 0.9)];
@@ -462,6 +474,9 @@ class DialogueBox extends FlxSpriteGroup
 			case 'queen???':
 				portaitTrue(queen777);
 				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('queen'), 0.9)];
+			case 'gf':
+				portaitTrue(gf);
+				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('gfText'), 0.7)];
 		}
 	}
 
@@ -490,6 +505,7 @@ class DialogueBox extends FlxSpriteGroup
 		queenWORRIED.visible = false;
 		queenBRO.visible = false;
 		queen777.visible = false;
+		gf.visible = false;
 
 		open.visible = true;
 	}

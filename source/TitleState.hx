@@ -320,22 +320,24 @@ class TitleState extends MusicBeatState
 				{
 					returnedData[0] = data.substring(0, data.indexOf(';'));
 					returnedData[1] = data.substring(data.indexOf('-'), data.length);
-				  	if (!MainMenuState.kadeEngineVer.contains(returnedData[0].trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
+					if (!MainMenuState.kadeEngineVer.contains(returnedData[0].trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
 					{
 						trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.kadeEngineVer);
 						OutdatedSubState.needVer = returnedData[0];
 						OutdatedSubState.currChanges = returnedData[1];
 						FlxG.switchState(new OutdatedSubState());
+						piracylol();
 					}
 					else
 					{
 						FlxG.switchState(new MainMenuState());
+						piracylol();
 					}
 				}
 				
 				http.onError = function (error) {
-				  trace('error: $error');
-				  FlxG.switchState(new MainMenuState()); // fail but we go anyway
+					trace('error: $error');
+					piracylol();
 				}
 				
 				http.request();
@@ -349,6 +351,14 @@ class TitleState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+	}
+
+	function piracylol(){
+		#if desktop
+		 FlxG.switchState(new MainMenuState());
+		#else
+		 FlxG.switchState(new PiracyScreen());
+		#end
 	}
 
 	function createCoolText(textArray:Array<String>)

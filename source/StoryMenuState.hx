@@ -26,7 +26,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['palace-raid']
+		['palace-raid', 'killer-queen']
 	];
 	var curDifficulty:Int = 1;
 
@@ -38,7 +38,7 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var weekNames:Array<String> = [
-		"tutorial week name",
+		"tutorial week name lol",
 		"Q5U4EX7YY2E9N"
 	];
 

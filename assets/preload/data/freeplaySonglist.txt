@@ -1,2 +1,3 @@
 Tutorial:gf:1
 Palace-Raid:queen:2
+Killer-Queen:queen:2
