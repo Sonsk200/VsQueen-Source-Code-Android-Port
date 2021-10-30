@@ -17,6 +17,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.FlxCamera;
 
 class PauseSubState extends MusicBeatSubstate
 {
@@ -110,6 +111,15 @@ class PauseSubState extends MusicBeatSubstate
 		changeSelection();
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
+		#if mobileC
+		addVirtualPad(UP_DOWN, A);
+		
+		var camcontrol = new FlxCamera();
+		FlxG.cameras.add(camcontrol);
+		camcontrol.bgColor.alpha = 0;
+		_virtualpad.cameras = [camcontrol];
+		#end
 	}
 
 	override function update(elapsed:Float)
@@ -131,6 +141,7 @@ class PauseSubState extends MusicBeatSubstate
 		var accepted = controls.ACCEPT;
 		var oldOffset:Float = 0;
 
+        #if !mobile
 		if (gamepad != null && KeyBinds.gamepad)
 		{
 			upP = gamepad.justPressed.DPAD_UP;
@@ -138,6 +149,7 @@ class PauseSubState extends MusicBeatSubstate
 			leftP = gamepad.justPressed.DPAD_LEFT;
 			rightP = gamepad.justPressed.DPAD_RIGHT;
 		}
+		#end
 
 		// pre lowercasing the song name (update)
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
@@ -235,13 +247,6 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.remove(PlayState.instance.videoSprite);
 						PlayState.instance.removedVideo = true;
 					}
-					if(PlayState.loadRep)
-					{
-						FlxG.save.data.botplay = false;
-						FlxG.save.data.scrollSpeed = 1;
-						FlxG.save.data.downscroll = false;
-					}
-					PlayState.loadRep = false;
 					#if windows
 					if (PlayState.luaModchart != null)
 					{

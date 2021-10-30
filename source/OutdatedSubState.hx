@@ -35,7 +35,7 @@ class OutdatedSubState extends MusicBeatState
 		add(bg);
 		
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"DELTARUNE CHAPTER 2 SPOILERS\nHello!\nThank you for downloading our mod!\nRemember,\nTHIS IS STILL JUST A DEMO VERSION!!\nThere is more to come soon.\nFollow the Twitter for updates!\nPress Enter to Continue", 32);
+			"DELTARUNE CHAPTER 2 SPOILERS\nHello!\nThank you for downloading our mod!\nRemember,\nTHIS IS STILL JUST A DEMO VERSION!!\nThere is more to come soon.\nFollow the Twitter for updates!\nTouch to Continue", 32);
 		txt.setFormat(Paths.font("determination.otf"), 45, FlxColor.fromRGB(200, 200, 200), CENTER);
 		txt.borderColor = FlxColor.BLACK;
 		txt.borderSize = 3;
@@ -52,12 +52,24 @@ class OutdatedSubState extends MusicBeatState
 				colorRotation++;
 			else
 				colorRotation = 0;
-		}, 0);
+		}, 0);		
 	}
 
 	override function update(elapsed:Float)
 	{
-		if (controls.ACCEPT)
+		var pressedEnter:Bool = controls.ACCEPT;
+
+		#if mobile
+		for (touch in FlxG.touches.list)
+		{
+			if (touch.justPressed)
+			{
+				pressedEnter = true;
+			}
+		}
+		#end
+
+		if (pressedEnter)
 		{
 			leftState = true;
 			FlxG.switchState(new MainMenuState());

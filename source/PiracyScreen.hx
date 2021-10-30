@@ -20,6 +20,10 @@ class PiracyScreen extends MusicBeatState
 		
 		var trolled:FlxSprite = new FlxSprite().loadGraphic(Paths.image("piracylol"));
 		add(trolled);
+
+		#if mobileC
+		addVirtualPad(NONE, A_B);
+		#end	
 	}
 	
 	
